@@ -1,5 +1,3 @@
-package main.java;
-
 import java.util.ArrayList;
 
 /* INSTRUCTIONS
@@ -24,7 +22,7 @@ import java.util.ArrayList;
  * Note: This check should not be case sensitive. That means if the review 
  * contains "BEST" or "Best" the method should be considered good; however, if 
  * the review contains a word like "asbestos" the review should NOT be considered 
- * good.
+ * good. You will not have to worry about punctuations.
  */
 
 public class ReviewCollection {

@@ -1,5 +1,3 @@
-package main.java;
-
 /*
  * This class is used for ReviewCollection.
  * No changes should be made to this file.

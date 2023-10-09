@@ -1,6 +1,3 @@
-package main.java;
-
-
 /*
  * This class is used for the SongList class.
  * No changes should be made to this file.
