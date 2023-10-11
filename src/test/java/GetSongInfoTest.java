@@ -13,7 +13,7 @@ public class GetSongInfoTest {
         song3.incrementTimesDownloaded();
         SongInfo song4 = new SongInfo("Vampire");
         song4.incrementTimesDownloaded();
-        SongInfo song5 = new SongInfo("Yam Yam");
+        SongInfo song5 = new SongInfo("Iamayam");
         song5.incrementTimesDownloaded();
         SongInfo song6 = new SongInfo("Pocket Crocodile");
         if (version == 1)
@@ -48,7 +48,7 @@ public class GetSongInfoTest {
     @Test
     void getSongInfo_Test03() {
         SongList sl = new SongList(createSongList(1));
-        SongInfo song = sl.getSongInfo("Yam Yam");
+        SongInfo song = sl.getSongInfo("Iamayam");
         // String result = song.getTitle() + song.getNumOfDownloads();
         // String expected = "Vampire1";
         assertEquals(null, song);       
@@ -58,9 +58,9 @@ public class GetSongInfoTest {
     @Test
     void getSongInfo_Test04() {
         SongList sl = new SongList(createSongList(3));
-        SongInfo song = sl.getSongInfo("Yam Yam");
+        SongInfo song = sl.getSongInfo("Iamayam");
         String result = song.getTitle() + song.getNumOfDownloads();
-        String expected = "Yam Yam2";
+        String expected = "Iamayam2";
         assertEquals(expected, result);
     }
 

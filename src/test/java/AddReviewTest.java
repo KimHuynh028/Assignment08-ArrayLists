@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class AddReviewTest {
 
     @DisplayName("addReview Test 1")
@@ -42,7 +39,7 @@ public class AddReviewTest {
 
         String expected0 = "Kept my head safe";
         String expected1 = "Worst app ever";
-        String expected2 = "Over priced pos";
+        String expected2 = "Overpriced pos";
         assertEquals(expected0, rl0);
         assertEquals(expected1, rl1);
         assertEquals(expected2, rl2);

@@ -64,17 +64,7 @@ public class ReviewCollection {
     public void addReview(ProductReview prodReview) {
         // Insert your code below
 
-        reviewList.add(prodReview);
-        boolean found = false;
-        int i = 0;
-        while (!found && i < productList.size()){
-            if (productList.get(i).equals(prodReview.getName())){
-                found = true;
-            }
-            i++;
-        }
-        if (!found)
-            productList.add(prodReview.getName());
+        
     }
 
     /* COMPLETE THIS METHOD
@@ -84,17 +74,8 @@ public class ReviewCollection {
      */
     public int getNumGoodReviews(String prodName) {
         // Insert your code below
-        int numOfGood = 0;
-        for (int i = 0; i < reviewList.size(); i++){
-            ProductReview temp = reviewList.get(i);
-            if (temp.getName().equals(prodName)){
-                if (temp.getReview().toLowerCase().contains("best ") ||
-                    temp.getReview().toLowerCase().contains(" best ") ||
-                    temp.getReview().toLowerCase().contains(" best"))
-                    numOfGood++;
-            }
-        }
+        
 
-        return numOfGood;
+        return 0;
     }
 }
