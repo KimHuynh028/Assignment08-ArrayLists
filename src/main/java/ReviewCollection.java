@@ -37,13 +37,44 @@ public class ReviewCollection {
         productList = new ArrayList<String>();
     }
 
-    /*
+    public ReviewCollection(ArrayList<ProductReview> revList, ArrayList<String> prodList) {
+        reviewList = revList;
+        productList = prodList;
+    }
+
+    /* Accessor
+     * This accessor is used for testing purposes.
+     * Do not change anything.
+     */
+    public ArrayList<ProductReview> getReviewList() {
+        return reviewList;
+    }
+
+    /* Accessor
+     * This accessor is used for testing purposes.
+     * Do not change anything.
+     */
+    public ArrayList<String> getProductList() {
+        return productList;
+    }
+
+    /* COMPLETE THIS METHOD
      * Adds a new review to the collection of reviews.
      */
     public void addReview(ProductReview prodReview) {
         // Insert your code below
 
-
+        reviewList.add(prodReview);
+        boolean found = false;
+        int i = 0;
+        while (!found && i < productList.size()){
+            if (productList.get(i).equals(prodReview.getName())){
+                found = true;
+            }
+            i++;
+        }
+        if (!found)
+            productList.add(prodReview.getName());
     }
 
     /* COMPLETE THIS METHOD
@@ -53,7 +84,17 @@ public class ReviewCollection {
      */
     public int getNumGoodReviews(String prodName) {
         // Insert your code below
+        int numOfGood = 0;
+        for (int i = 0; i < reviewList.size(); i++){
+            ProductReview temp = reviewList.get(i);
+            if (temp.getName().equals(prodName)){
+                if (temp.getReview().toLowerCase().contains("best ") ||
+                    temp.getReview().toLowerCase().contains(" best ") ||
+                    temp.getReview().toLowerCase().contains(" best"))
+                    numOfGood++;
+            }
+        }
 
-        return 0;
+        return numOfGood;
     }
 }

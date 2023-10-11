@@ -1,5 +1,3 @@
-package main.java;
-
 import java.util.ArrayList;
 
 /* INSTRUCTIONS
@@ -9,7 +7,7 @@ import java.util.ArrayList;
  * You will have to implement two methods for the SongList class: getSongInfo
  * and updateDownloads.
  * The getSongInfo method returns a reference to a SongInfo object if an object 
- * with a title that matches the paramter title exists in the downloadList. If 
+ * with a title that matches the parameter title exists in the downloadList. If 
  * no song in download has a title that matches the parameter title, the method 
  * returns null.
  *
@@ -46,7 +44,7 @@ import java.util.ArrayList;
  * The call mySongs.updateDownloads(songTitles) will have the following result:
  *     0               1               2               3              4               5
  * "Little Man"    "Yam Yam"     "Tree Hugger"     "Hey Jude"      "Daria"        "Russian"
- *     5               2               4               2              1               1
+ *     5               3               5               2              1               1
  * 
  * When writing your solution you must use the getSongInfo method.
  */
@@ -56,6 +54,22 @@ public class SongList {
 
     public SongList() {
         downloadList = new ArrayList<SongInfo>();
+    }
+
+    /* Constructor
+     * This constructor is used for testing purposes.
+     * Do not change anything.
+     */
+    public SongList(ArrayList<SongInfo> newList) {
+        downloadList = newList;
+    }
+
+    /* Accessor
+     * This accessor is used for testing purposes.
+     * Do not change anything.
+     */
+    public ArrayList<SongInfo> getDownloadList() {
+        return downloadList;
     }
 
     /* COMPLETE THIS METHOD
@@ -70,6 +84,7 @@ public class SongList {
     public SongInfo getSongInfo(String Title) {
         // Insert your code below
 
+        
         return null;
     }
 
@@ -91,7 +106,7 @@ public class SongList {
      */
     public void updateDownloads(ArrayList<String> titles) {
         // Insert your code below
-
+        
 
     }
 }
